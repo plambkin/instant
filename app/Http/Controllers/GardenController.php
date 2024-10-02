@@ -20,7 +20,7 @@ class GardenController extends Controller
         try {
             // Validate the request data
             $validatedData = $request->validate([
-                'photo' => 'sometimes|nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120', // Increase the file size limit to 5MB
+                'photo' => 'sometimes|nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // Increase the file size limit to 5MB
                 'dimensions' => 'required|string',
                 'type' => 'required|string',
                 'statues' => 'nullable', // We will handle conversion below
